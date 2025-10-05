@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #0A0A0A; /* Deep Black */
+    color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #FF4500; /* Bright Orange/Red for racing theme */
+    border-bottom: 2px solid #FF4500;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+
+#game-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.4); /* Glowing race effect */
+}
+
+#stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2ecc71; /* Green for GO */
+}
+
+#question-box {
+    text-align: left;
+    min-height: 250px; 
+}
+
+#question {
+    color: #f0f0f0; 
+    font-size: 1.3em; 
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#question span {
+    color: #FFD700; /* Gold/Yellow for the stage number */
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.choices-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.choice-button {
+    padding: 18px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.choice-button:hover:not(:disabled) {
+    background-color: #4a4a4a;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px #FF4500;
+}
+
+.choice-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Feedback Colors */
+.correct {
+    background-color: #2ecc71 !important; /* Green - Checkered Flag */
+    border: 2px solid #1abc9c;
+}
+
+.incorrect {
+    background-color: #e74c3c !important; /* Red - Crash */
+    border: 2px solid #c0392b;
+}
+
+#start-button {
+    padding: 15px 40px;
+    margin-top: 30px;
+    background-color: #FF4500; /* Race Start Red/Orange */
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #c0392b;
+    transition: all 0.1s;
+}
+
+#start-button:active {
+    box-shadow: 0 0 0 #c0392b;
+    transform: translateY(4px);
+}
+
+#message {
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 1.1em;
+    color: #FFD700; 
+    font-weight: 600;
+}
+
+.win-message {
+    color: #2ecc71 !important; /* Bright green for final win */
+    border: 2px solid #2ecc71;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: 8px;
+}
